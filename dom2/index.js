@@ -98,3 +98,25 @@ let books = [
     },
   },
 ];
+
+function getaticlecart() {
+  for (let i = 0; i < books.length; i++) {
+
+    document.getElementById("books").innerHTML+=`
+    <div class="book">
+              <div>
+              <div class="book-image">
+                  <img src="${books[i].imageUrls.medium}" alt="book-image">
+              </div>
+              </div>
+              <div class="book-info">
+                  <p>${books[i].isbn}</p>
+                  <p>${books[i].bookTitle}</p>
+                  <p>${books[i].bookAuthor}</p>
+                  <p>Year of publication: 2002${books[i]. yearOfPublication}</p>
+              </div>
+    </div>
+    `
+  }
+}
+getaticlecart();
